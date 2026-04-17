@@ -1,16 +1,13 @@
-name: First Workflow
+name: My First Workflow
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  hello-job:
+  run-one-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Say Hello
-        run: echo "Hello, GitHub Actions!"
+      - name: Print message
+        run: echo "Workflow is running successfully 🚀"
