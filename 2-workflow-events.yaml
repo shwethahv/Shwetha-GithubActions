@@ -1,0 +1,10 @@
+name: 02 workflow events
+
+on: push
+
+jobs: 
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the ttrigger
+        run: echo "Workflow is running successfully 🚀a(n) ${{ github.even_name }} event."
