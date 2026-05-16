@@ -1,0 +1,24 @@
+name: 03 - Workflow Runners
+
+on: push
+
+jobs:
+  run-on-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show OS
+        run: |
+          echo "This job is running on ubuntru"
+          echo "OS: ${{ runner.os }}. $RUNNER_OS"
+
+  # run-on-macos:
+  #   runs-on: macos-latest
+  #   steps:
+  #     - name: Run on macOS
+  #       run: echo "Running on macOS"
+
+  # run-on-windows:
+  #   runs-on: windows-latest
+  #   steps:
+  #     - name: Run on Windows
+  #       run: echo "Running on Windows"
