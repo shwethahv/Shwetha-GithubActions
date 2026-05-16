@@ -1,7 +1,7 @@
 name: 02 workflow events
 
 on:
- push:
+  push:
   pull_request:
   schedule:
     - cron: '*/5 * * * *' # Runs every day at midnight 0 0 * * *' only 5 digits are allowed
@@ -11,5 +11,5 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: Show the ttrigger
-        run: echo "Workflow is running successfully 🚀a(n) ${{ github.even_name }} event."
+      - name: Show the trigger
+        run: echo "Workflow is running successfully 🚀a(n) ${{ github.event_name }} event."
